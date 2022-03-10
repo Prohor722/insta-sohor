@@ -134,10 +134,11 @@ const createPost = (post) => {
 };
 
 const showPosts = (posts) => {
+    const filterPosts = posts.filter((post) => !reportedPostsId.includes(post.id));
     const productsContainer = document.getElementById( "posts" );
     productsContainer.innerHTML = "";
 
-    posts.forEach((post) => {
+    filterPosts.forEach((post) => {
         const div = createPost(post);
         productsContainer.appendChild(div);
     });
