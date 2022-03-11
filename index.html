@@ -88,7 +88,10 @@
             </p>
 
             <h5>2.What does javascript event loop do?</h5>
-            <p><strong>Ans:</strong></p>
+            <p>
+                <strong>Ans:</strong> 
+                Javascript is a combination of synchronous and asynchronous events. Synchronous is one after another and asynchronous is like call back or promises. Javascript application executation is single threaded. So, when there is an event or function executing and in that main time another function is called then javascript uses event queue to hold that call. After executing that task javscript look into the queue to execute those tasks. But when there is a function executing and that function calls another function then this function callbacks are stored in call stack. So, when there is a function executing and another function is called then this called function waits in the event queue and if current executing function calls another funtion then javascript goes to that function and holds the current function in call stack. Then it executes all the functions from stack from last to first and after executing those functions it execute the event queue functions from first to last. All these process run by event loop.
+            </p>
             
             <h5>3.Difference between local storage and session storage?</h5>
             <p>
